@@ -1,4 +1,14 @@
+using AnnuaireLib;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//chaine de connexion
+string connexionString = builder.Configuration.GetConnectionString("MainConnectionString") ??
+	throw (new Exception("Connection string is missing"));
+
+builder.Services.AddDbContext<AnnuaireDbContext>(options => options
+		.UseMySql(connexionString, ServerVersion.AutoDetect(connexionString)));
 
 // Add services to the container.
 

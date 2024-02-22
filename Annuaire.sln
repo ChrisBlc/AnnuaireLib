@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnuaireLib", "AnnuaireLib\AnnuaireLib.csproj", "{FD926AF0-67EC-4B22-95CA-909B1DCFF0FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnuaireAPI", "AnnuaireAPI\AnnuaireAPI.csproj", "{199782EB-1AE2-483B-8A53-BA95A8AB7584}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FD926AF0-67EC-4B22-95CA-909B1DCFF0FC} = {FD926AF0-67EC-4B22-95CA-909B1DCFF0FC}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
